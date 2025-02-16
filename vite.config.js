@@ -6,17 +6,24 @@ import compress from "vite-plugin-compression";
 // https://vite.dev/config/
 export default defineConfig({
   build: {
-    target: 'esnext'
+    target: 'esnext',
+    assetsDir: "assets",
+
+    minify: "terser",
+    terserOptions: {
+      ecma: 2020, // 👈 Keep ESNext syntax
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+      },
+    },
   },
   plugins: [
     react(),
     tailwindcss(),
     compress({
-      verbose: true,
-      disable: false,
-      threshold: 1024, // Only compress files larger than 1KB
-      algorithm: "gzip", // You can also use 'brotliCompress'
-      ext: ".gz", // File extension for compressed files
+      algorithm: "brotliCompress", // You can also use 'brotliCompress'
+      ext: ".br", // File extension for compressed files
     }),
   ],
 });

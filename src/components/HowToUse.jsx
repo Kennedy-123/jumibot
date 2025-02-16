@@ -1,6 +1,6 @@
-import step1Svg from '../icons/step1.svg';
-import step2Svg from '../icons/step2.svg';
-import step3Svg from '../icons/step3.svg';
+import step1Svg from '../assets/icons/step1.svg';
+import step2Svg from '../assets/icons/step2.svg';
+import step3Svg from '../assets/icons/step3.svg';
 const HowToUse = () => {
     return (
       <section className="bg-orange-100 py-16 px-6">

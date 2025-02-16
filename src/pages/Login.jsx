@@ -6,7 +6,7 @@ import loginUser from "../utils/login-user";
 import { Link } from "react-router-dom";
 import { auth, googleProvider } from "../firebase/firebase-config";
 import { signInWithPopup } from "firebase/auth";
-import googleSvg from "../icons/google.svg";
+import googleSvg from "../assets/icons/google.svg";
 import axios from "axios";
 
 

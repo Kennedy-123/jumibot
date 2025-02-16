@@ -6,7 +6,7 @@ import { Link, useNavigate } from "react-router-dom";
 import checkLoginStatus from "../utils/check-login";
 import { signInWithPopup } from "firebase/auth";
 import { auth, googleProvider } from "../firebase/firebase-config";
-import googleSvg from "../icons/google.svg";
+import googleSvg from "../assets/icons/google.svg";
 checkLoginStatus();
 
 const url = import.meta.env.VITE_BASE_URL

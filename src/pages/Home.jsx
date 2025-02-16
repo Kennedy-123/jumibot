@@ -1,5 +1,5 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
-import * as Yup from "yup";
+import {string, object} from "yup"
 import checkLoginStatus from "../utils/check-login";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
@@ -43,8 +43,8 @@ const HomePage = () => {
   // Regex for validating Jumia product URLs
   const jumiaUrlRegex = /^https?:\/\/(www\.)?jumia\.com\.\w{2,3}(\/.*)?$/;
 
-  const validationSchema = Yup.object({
-    productUrl: Yup.string()
+  const validationSchema = object({
+    productUrl: string()
       .url("Enter a valid URL")
       .required("Product URL is required")
       .matches(jumiaUrlRegex, "Please enter a valid Jumia product URL"),
